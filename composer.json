@@ -1,8 +1,7 @@
 {
-    "name": "apcopay/apcopay",
+    "name": "apcopay/apcopay_php",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "dev",
     "require": {},
     "authors": [
         {
