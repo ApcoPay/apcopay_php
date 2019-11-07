@@ -2,6 +2,11 @@
 
 The ApcoPay PHP library provides the functionality to process financial transactions with the [ApcoPay](https://www.apcopay.eu/) gateway.
 
+## Requirements
+
+* The PHP extension cURL is required.
+* A merchant account with ApcoPay. Send an email to [hello@apcopay.eu](mailto:hello@apcopay.eu) to set up a merchant account.
+
 ## Installation
 
 The recommended method of installation is via [Packagist](https://packagist.org/) and [Composer](https://getcomposer.org/).
@@ -11,11 +16,37 @@ Run the following command to install the package and add it as a requirement to 
 composer require apcopay/apcopay_php
 ```
 
-## Requirements
-
-The PHP extension cURL is required.
+Alternatively, the ApcoPay PHP library can also be used by copying the contents of this repository in the project folder and using PHP require on the files as shown [below](#PHP-require).
 
 ## Description
+
+The ApcoPay PHP library
+
+### File loading
+
+The ApcoPay PHP library files can be loaded with the following options:
+
+#### Composer autoloading
+
+For more information about composer autoloading go to [https://getcomposer.org/doc/01-basic-usage.md#autoloading](https://getcomposer.org/doc/01-basic-usage.md#autoloading)
+
+>Skip this step if you already have composer autoloading set up
+
+```php
+require __DIR__ . '/vendor/autoload.php';
+```
+
+#### PHP require
+
+```php
+require __DIR__ . '/apcopay_php/src/ApcoPayGateway.php';
+require __DIR__ . '/apcopay_php/src/Configuration.php';
+require __DIR__ . '/apcopay_php/src/TransactionType.php';
+require __DIR__ . '/apcopay_php/src/TransactionRequest.php';
+require __DIR__ . '/apcopay_php/src/TransactionResponse.php';
+require __DIR__ . '/apcopay_php/src/NotificationRequest.php';
+require __DIR__ . '/apcopay_php/src/RedirectRequest.php';
+```
 
 ### Initialization
 
@@ -30,8 +61,8 @@ The ApcoPayGateway configuration requires the following 5 parameters:
 #### Initialise ApcoPayGateway example
 
 ```php
-$gateway = new ApcoPayGateway(
-    new Configuration(
+$gateway = new ApcoPay\ApcoPayGateway(
+    new ApcoPay\Configuration(
         "1234",
         "dfnu2345b2354vbu",
         "3ui423ui4",
@@ -104,11 +135,11 @@ Declined transaction results will vary between banks
 #### Process transaction example
 
 ```php
-$transactionRequest = new TransactionRequest();
+$transactionRequest = new ApcoPay\TransactionRequest();
 $transactionRequest->amount = "2.40";
 $transactionRequest->currency_code = "978";
 $transactionRequest->order_reference = "1234";
-$transactionRequest->transaction_type = TransactionType::Purchase;
+$transactionRequest->transaction_type = ApcoPay\TransactionType::Purchase;
 
 $transactionRequest->card_number = "4444444444444444";
 $transactionRequest->card_cvv = "123";
