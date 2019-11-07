@@ -11,7 +11,6 @@ abstract class TransactionType
     const VoidCredit = 6; // Cancel a credit - Before end of day
     const VoidCapture = 7; // Cancel a capture - Before end of day
     const VoidAuthorisation = 9; // Cancel an authorization - Before end of day
-    const Verify = 10; // Verify a transaction’s status
     const RepeatPurchase = 11; // Repeats a purchase by submitting the original PSPID
     const PartialRefund = 12; // Reverse a partial/full amount of the original transaction
     const OriginalCredit = 13; // Pay out an amount greater than the amount of the original transaction

@@ -44,7 +44,7 @@ class ApcoPayGateway
             "<Do3DSTransaction xmlns=\"https://www.apsp.biz/\">" .
             "<MerchID>" . $this->configuration->merchant_id . "</MerchID>" .
             "<MerchPassword>" . $this->configuration->merchant_password . "</MerchPassword>" .
-            "<TrType>" . $transaction->action_type . "</TrType>" .
+            "<TrType>" . $transaction->transaction_type . "</TrType>" .
             "<CardNum>" . $transaction->card_number . "</CardNum>" .
             "<CVV2>" . $transaction->card_cvv . "</CVV2>" .
             "<ExpDay></ExpDay>" .

@@ -6,7 +6,7 @@ class TransactionRequest
 {
     public $amount;
     public $currency_code; // ISO 4217 numeric code
-    public $action_type;
+    public $transaction_type;
     public $order_reference; // Must not contain ||
 
     public $card_number;
