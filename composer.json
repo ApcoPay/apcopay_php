@@ -1,11 +1,23 @@
 {
     "name": "apcopay/apcopay_php",
+    "description": "The ApcoPay PHP library provides the functionality to process transactions with the ApcoPay payment gateway.",
+    "keywords": [
+        "apcopay",
+        "payment",
+        "credit card",
+        "payment gateway",
+        "library",
+        "integration",
+        "api",
+        "checkout"
+    ],
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
     "require": {
         "ext-curl": "*"
     },
+    "homepage": "https://www.apcopay.eu",
     "authors": [
         {
             "name": "ApcoPay",
