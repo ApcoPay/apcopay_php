@@ -2,6 +2,7 @@
     "name": "apcopay/apcopay_php",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
     "require": {
         "ext-curl": "*"
     },
